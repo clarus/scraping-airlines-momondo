@@ -1,0 +1,24 @@
+{
+  "name": "scraping-airlines-momondo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarus/scraping-airlines-momondo.git"
+  },
+  "author": "Guillaume Claret",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clarus/scraping-airlines-momondo/issues"
+  },
+  "homepage": "https://github.com/clarus/scraping-airlines-momondo#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "phantomjs-prebuilt": "^2.1.12"
+  }
+}
