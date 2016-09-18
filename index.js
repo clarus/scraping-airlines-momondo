@@ -1,4 +1,4 @@
-var url = 'https://www.momondo.fr/flightsearch?Search=true&TripType=2&SegNo=2&SO0=CDG&SD0=HND&SDP0=13-10-2016&SO1=HND&SD1=CDG&SDP1=14-10-2016&AD=1&TK=ECO&DO=false&NA=false';
+var url = 'https://www.momondo.fr/flightsearch?Search=true&TripType=2&SegNo=2&SO0=FRA&SD0=BKK&SDP0=14-11-2016&SO1=BKK&SD1=FRA&SDP1=21-11-2016&AD=1&TK=ECO&DO=false&NA=false';
 var page = require('webpage').create();
 
 function nowString() {
@@ -7,12 +7,12 @@ function nowString() {
 }
 
 page.open(url, function(status) {
-  var title = page.evaluate(function() {
-    return document.title;
-  });
-  console.log(title);
+  // var title = page.evaluate(function() {
+  //   return document.title;
+  // });
+  // console.log(title);
   var waitDuration = 10;
-  console.log('Waiting', waitDuration, 'seconds...');
+  // console.log('Waiting', waitDuration, 'seconds...');
   if (status === "success") {
     setTimeout(function () {
       var now = nowString();
@@ -25,7 +25,7 @@ page.open(url, function(status) {
           return null;
         }
       });
-      console.log(now, firstPrice ? firstPrice.replace(/\W/g, '') : '0');
+      console.log(now + ',' + (firstPrice ? firstPrice.replace(/\W/g, '') : '0'));
       phantom.exit();
     }, waitDuration * 1000)
   }
